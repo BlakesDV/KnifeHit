@@ -23,8 +23,13 @@ public class Scenemngr : MonoBehaviour
     {
         GetComponent<Animator>().SetTrigger("CreditsScene");
     }
-    public void ExitButton()
+    public void ExitCreditsScene()
     {
-        GetComponent<Animator>().SetTrigger("ExitButton");
+        GetComponent<Animator>().SetTrigger("ExitCreditsScene");
+    }
+    public void ExitGame()
+    {
+        Application.Quit();
+        print("exit");
     }
 }

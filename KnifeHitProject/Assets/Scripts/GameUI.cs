@@ -9,18 +9,6 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject panelShip;
     [SerializeField] private GameObject shipPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ShowRestartButton()
     {
         restartButton.SetActive(true);

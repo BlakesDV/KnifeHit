@@ -49,7 +49,7 @@ public class ShipThrow : MonoBehaviour
         if(!isActive)  return; 
         isActive = false;
 
-        if(collision.collider.tag == "Ship")
+        if(collision.collider.tag == "Planet")
         {
             rb.velocity = new Vector2(0, 0);
             rb.bodyType = RigidbodyType2D.Kinematic;

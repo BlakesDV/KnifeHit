@@ -20,13 +20,6 @@ public class Structs101 : MonoBehaviour
 
     List<DatosDeJugador> jugadores = new List<DatosDeJugador>();
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         for(int i = 0; i < 10; i++)
