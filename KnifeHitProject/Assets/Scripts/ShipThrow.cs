@@ -35,7 +35,7 @@ public class ShipThrow : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T) && isActive) 
         {
             rb.AddForce(throwForce, ForceMode2D.Impulse); //add force to rb
-            rb.gravityScale = 1;
+            
         }
     }
 
@@ -56,10 +56,12 @@ public class ShipThrow : MonoBehaviour
             transform.SetParent(collision.collider.transform); //une el collider de la ship con el planeta al hacerlo parent
             shipCollider.offset = new Vector2(shipCollider.offset.x, -0.2f);
             shipCollider.size = new Vector2(shipCollider.size.x, 0.25f);
+            GameController.Instance.OnSuccessfulKnifeHit();
         }
         else if(collision.collider.tag == "Ship")
         {
             rb.velocity = new Vector2(rb.velocity.x, -2);
+            GameController.Instance.StartGameOverSequence(false);
         }
         //Destroy(gameObject);
     }
