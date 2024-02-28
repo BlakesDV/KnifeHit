@@ -13,11 +13,18 @@ public class SceneManager : MonoBehaviour
     public void ClosePanel()
     {
         GetComponent<Animator>().SetTrigger("SceneChange");
-
     }
     
     public void SetTimePlay()
     {
         Time.timeScale = 1;
+    }
+    public void OpenCredits()
+    {
+        GetComponent<Animator>().SetTrigger("CreditsScene");
+    }
+    public void ExitButton()
+    {
+        GetComponent<Animator>().SetTrigger("ExitButton");
     }
 }

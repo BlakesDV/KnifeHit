@@ -25,8 +25,8 @@ public class ShipThrow : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //acts.Shoot.Throw.performed += Throw;
-        //rb = GetComponent<Rigidbody2D>();
+        acts.Shoot.Throw.performed += Throw;
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class ShipThrow : MonoBehaviour
             rb.velocity = new Vector2(0, 0);
             rb.bodyType = RigidbodyType2D.Kinematic;
             transform.SetParent(collision.collider.transform); //une el collider de la ship con el planeta al hacerlo parent
-            shipCollider.offset = new Vector2(shipCollider.offset.x, -0.2f); 
+            shipCollider.offset = new Vector2(shipCollider.offset.x, -0.2f);
             shipCollider.size = new Vector2(shipCollider.size.x, 0.25f);
         }
         else if(collision.collider.tag == "Ship")
