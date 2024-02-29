@@ -7,7 +7,8 @@ public class RandomGen : MonoBehaviour
     public List<ScriptablesObjects> patrones;
     public GameController controller;
     public PlanetRotation planet;
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,6 @@ public class RandomGen : MonoBehaviour
             ScriptablesObjects patronRandom = patrones[randomIndex];
             return patronRandom;
         }
-
         return null;
     }
 }

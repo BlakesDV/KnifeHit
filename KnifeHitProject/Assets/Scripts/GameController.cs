@@ -57,6 +57,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
+            
             StartGameOverSequence(true);
         }
     }
@@ -70,9 +71,9 @@ public class GameController : MonoBehaviour
     {
         if (win)
         {
-            //hacer panel de win
+            /*hacer panel de win*/
             yield return new WaitForSecondsRealtime(0.3f);
-            RestartGame();
+            //RestartGame();
         }
         else
         {

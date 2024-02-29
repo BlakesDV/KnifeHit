@@ -44,5 +44,4 @@ public class PlanetRotation : MonoBehaviour
                 rotIndex = rotIndex < patron.rotationPattern.Length ? rotIndex : 0; //regresa a 0 para hacer el loop, reinicia la rotacion         
         }
     }
-
 }
