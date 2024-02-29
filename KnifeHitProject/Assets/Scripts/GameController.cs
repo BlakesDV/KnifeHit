@@ -47,6 +47,7 @@ public class GameController : MonoBehaviour
             patron.shipCount--;
             Instantiate(shipObject, shipSpawnPosition, Quaternion.Euler(0, 0, -90)); //solucionar rotacion -90 para la nave
         }
+        /*else que le llame a random gen y repita el start (hacer una funcion caon las lineas de start q la llame el start y se pueda llamar aca)*/
     }
 
     public void OnSuccessfulKnifeHit()

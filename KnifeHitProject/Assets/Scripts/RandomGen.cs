@@ -12,6 +12,7 @@ public class RandomGen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /*crear func con lineas sig y llamarlo aca*/
         ScriptablesObjects currentPattern;
         currentPattern = RandomPattern();
         controller.patron = currentPattern;
