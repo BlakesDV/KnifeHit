@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public ScriptablesObjects patron;
+    private bool spawnedShip = false;
 
     public static GameController Instance { get; private set; }
     [SerializeField] private Vector2 shipSpawnPosition;
@@ -23,18 +24,29 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        //Bool-Revisar si está spawneado para detener el spawn de más naves
+        /*Bool-Revisar si está spawneado para detener el spawn de más naves*/
+        
         if (patron != null)
         {
             GameUI.SetInitialDisplayedKnifeCount(patron.shipCount);
-            SpawnShip();
+            if (!spawnedShip)
+            {
+                // Lógica para spawnear la nave
+                SpawnShip();
+
+                // Marcar que la nave ha sido spawneda
+                spawnedShip = true;
+            }
         }
     }
 
     private void SpawnShip()
-    {
-        patron.shipCount--;
-        Instantiate(shipObject, shipSpawnPosition, Quaternion.Euler(0, 0, -90)); //solucionar rotacion -90 para la nave
+    {   
+        if(patron.shipCount > 0 )
+        {
+            patron.shipCount--;
+            Instantiate(shipObject, shipSpawnPosition, Quaternion.Euler(0, 0, -90)); //solucionar rotacion -90 para la nave
+        }
     }
 
     public void OnSuccessfulKnifeHit()
